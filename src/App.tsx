@@ -1,6 +1,13 @@
+import { Button } from './components/button'
+
 function App() {
   return (
-   <h1>#BullsNation !</h1>
+   <div>
+     <Button />
+     <Button />
+     <Button />
+     <Button />
+   </div> 
   ); 
 }
 
