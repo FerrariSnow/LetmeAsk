@@ -30,6 +30,23 @@
     margin-top: 16px;
     color: #E6E6FA;
   }
+
+  h2{
+    font-size: 24px;
+    margin: 64px 0 24px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h3{
+    font-size: 14px;
+    color: 737380;
+    margin-top: 16px;   
+  }
+
+  a {
+    color: #666;
+  }
+
   main {
     flex: 8;
 
