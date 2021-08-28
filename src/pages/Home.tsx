@@ -1,6 +1,7 @@
 import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
 import googleIconImg from '../assets/images/google-icon.svg'
+import { Button } from '../components/button';
 
 import '../styles/global.css'
 import '../styles/auth.css'
@@ -16,7 +17,7 @@ export function Home() {
       <main>
         <div className="main-content">
           <img src={logoImg} alt="Let me Ask" />
-          <button>
+          <button className="create-room">
             <img src={googleIconImg} alt="Logo do Google"/>
             Crie sua sala com o Google
           </button>
@@ -25,9 +26,9 @@ export function Home() {
             <input type="text"
             placeholder="Digite o código da sala"
             />
-            <button type="submit">
+            <Button type="submit">
               Entrar na sala
-            </button>
+            </Button>
           </form>
         </div>
       </main>
