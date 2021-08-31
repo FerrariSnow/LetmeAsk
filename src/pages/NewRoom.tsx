@@ -9,6 +9,7 @@ import '../styles/global.css'
 import '../styles/auth.css'
 
 export function NewRoom() { 
+  
   return (
     <div  id="page-auth">
       <aside>
