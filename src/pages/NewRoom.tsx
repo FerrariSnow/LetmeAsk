@@ -7,9 +7,11 @@ import { Button } from '../components/button';
 
 import '../styles/global.css'
 import '../styles/auth.css'
+import { useAuth } from '../hooks/useAuth';
 
 export function NewRoom() { 
-  
+  const { user } = useAuth();
+
   return (
     <div  id="page-auth">
       <aside>
