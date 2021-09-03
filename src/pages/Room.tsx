@@ -9,7 +9,7 @@ export function Room() {
       <header>
         <div className="content">
           <img src={logoImg} alt="LetmeAsk" />
-          <div className="code">#BullsNation</div>
+          <div>#BullsNation</div>
         </div>
       </header>
 
