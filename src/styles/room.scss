@@ -19,8 +19,8 @@
   main {
     max-width: 800px;
     margin: 0 auto;
-    align-items: inherit;
-
+    display: block;
+     
     .room-title {
       margin: 32px 0 24px;
       display: flex;
@@ -54,6 +54,37 @@
         resize: vertical;
         min-height: 130px;
       }
+
+      .form-footer {
+        display : flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 16px;
+
+        span {
+          font-size:14px;
+          color: #737380;
+          font-weight: 500;
+        }
+      .butao {
+        font-size: 12px;
+        max-width: 75px;
+        max-height: 18px;
+        background: transparent;
+        border: 0;
+        color: #000;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+
+        Button {
+          font-size: 18px;
+          max-width: 200px;
+          align-self: left;
+        }
+
+        
+      }
+      }
     }
   }
-}
