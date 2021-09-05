@@ -40,6 +40,11 @@ async function handleCreateRoom() {
       return;
     }
 
+    if (roomRef.val().endedAt) {
+      alert('Esta sala já foi finalizada !');
+      return;
+    }
+
     history.push(`/rooms/${roomCode}`);
   }
 
