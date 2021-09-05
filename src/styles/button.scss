@@ -14,13 +14,22 @@
   border: 0;
 
   transition: filter 0.2s;
-}
 
-.button:not(:disabled):hover{
+  img {
+    margin-right: 8px;
+  }
+
+  &.outlined {
+    background: #FFF;
+    border: 1px solid #666;
+    color: #666;
+  }
+
+&:not(:disabled):hover{
   filter: brightness(0.9);
 }
-
-.button:disabled{
+&:disabled{
   opacity: 0.6;
   cursor: not-allowed;
+}
 }
