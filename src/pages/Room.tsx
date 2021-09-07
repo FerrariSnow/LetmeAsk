@@ -18,9 +18,10 @@ type RoomParams = {
 }
 
 export function Room() {
-  const { user }  = useAuth();
+  //const { user }  = useAuth();
   const params = useParams<RoomParams>();
   const [newQuestion, setNewQuestion] = useState('');
+  const { user, signInWithGoogle } = useAuth();
   const roomId = params.id;
 
   const { title, questions } = useRoom(roomId);
@@ -51,6 +52,10 @@ export function Room() {
 
     setNewQuestion('');
   }
+  
+  async function handleLoginGoogle() {
+    await signInWithGoogle()
+   }
 
   async function handleLikeQuestion(questionId: string, likeId: string | undefined) {
     if (likeId) {
@@ -91,7 +96,7 @@ export function Room() {
                 <span>{user.name}</span>
             </div>
             ) : (
-            <span>Para enviar uma pergunta, <button className="butao">faça seu login</button>. .</span>
+            <span>Para enviar uma pergunta, <button className="butao" onClick={(handleLoginGoogle)}>faça seu login</button>. .</span>
             ) }
             <Button type="submit" disabled={!user}>Enviar pergunta</Button>
           </div>
@@ -127,4 +132,8 @@ export function Room() {
       </main>
     </div>
   );
+}
+
+function signInWithGoogle(): import("react").MouseEventHandler<HTMLButtonElement> | undefined {
+  throw new Error('Function not implemented.');
 }
